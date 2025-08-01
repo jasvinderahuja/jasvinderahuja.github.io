@@ -1,0 +1,56 @@
+---
+title: "1. Two Sum"
+author: "Jasvinder Ahuja"
+format:
+  html:
+    toc: true
+    code-copy: true
+editor: visual
+image: images/LC1_TwoSum.png
+categories: [Python, Algorithms]
+---
+
+# 1. [Two Sum](https://leetcode.com/problems/two-sum/description/)
+
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+## Solution
+
+```{python two sum, eval=FALSE}
+
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+  used_nums = {}
+  
+  for i, val in enumerate(nums):
+    look_for = target - val
+    if look_for in used_nums.keys():
+      return [i, used_nums[look_for]]
+    else:
+      used_nums[val] = i
+    return -1
+
+```
+
+## How It Works:
+1. Create a dictionary used_nums to keep track of numbers we’ve already seen along with their indices.
+
+2. For each element val in nums:
+- Calculate look_for = target - val.
+- If look_for exists in used_nums, we’ve found a pair! 
+  * Return the current index i and the index of look_for.
+- Otherwise, store val and its index in the dictionary.
+
+3. If no pair is found, return -1.
+
+## Why This is Efficient:
+- Time Complexity: O(n) – Loops through the list once.
+- Space Complexity: O(n) – The seen numbers are stored in a dictionary.
+
+## Key Takeaways:
+- Using a hash map (dictionary) makes the solution fast and clean.
+- Using a lookup table reduces nested loops in problems like this.
+
