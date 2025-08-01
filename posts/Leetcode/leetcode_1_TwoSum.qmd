@@ -9,7 +9,7 @@ format:
     toc-depth: 2
     code-copy: true
 editor: visual
-image: posts/Leetcode/images/LC1_TwoSum.png
+image: images/LC1_TwoSum.png
 categories: [Python, Algorithms]
 ---
 
