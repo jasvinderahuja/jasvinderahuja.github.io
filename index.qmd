@@ -3,6 +3,10 @@ title: "Home"
 listing:
   contents: posts
   sort: "date desc"
-  limit: 5
   type: default
 ---
+
+# Welcome
+
+Here are the latest posts.
+

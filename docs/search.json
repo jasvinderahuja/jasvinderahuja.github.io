@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am Healthcare Data Scientist passionate about using data to drive meaningful impact in patient care, equity, and operational efficiency. Currently at Virginia Garcia Memorial Health Center (an FQHC), I design end-to-end analytics solutions — from data pipelines and machine learning models to intuitive dashboards — that empower care teams and support underserved communities.\nWith a background in bioinformatics and molecular genetics research from Oregon Health & Science University, NIH and Cleveland State University, I bring the rigor of a researcher and the focus of a practitioner to real-world applications. My recent work includes outreach prioritization models, social (non-medical) determinants of health (SDoH) analysis, and tools to improve appointment utilization and care access.\nI specialize in SQL, R, Python, Tableau, machine learning and Molecular Genetics. My approach is strategic, human-centered, and outcome-driven — always aligned with the mission of making healthcare more data-informed, effective, and equitable.\n\n\nIf you’d like to collaborate, discuss opportunities, or just say hello, feel free to connect with me via LinkedIn or email me directly at jasvinderahuja@gmail.com."
+  },
+  {
+    "objectID": "about.html#get-in-touch",
+    "href": "about.html#get-in-touch",
+    "title": "About",
+    "section": "",
+    "text": "If you’d like to collaborate, discuss opportunities, or just say hello, feel free to connect with me via LinkedIn or email me directly at jasvinderahuja@gmail.com."
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "1. Two Sum\n\n\n\n\n\n\n\n\nJasvinder Ahuja\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order.\n\n\n\ndef twoSum(self, nums: List[int], target: int) -&gt; List[int]:\n  used_nums = {}\n  \n  for i, val in enumerate(nums):\n    look_for = target - val\n    if look_for in used_nums.keys():\n      return [i, used_nums[look_for]]\n    else:\n      used_nums[val] = i\n    return -1\n\n\n\n\n\nCreate a dictionary used_nums to keep track of numbers we’ve already seen along with their indices.\nFor each element val in nums:\n\n\nCalculate look_for = target - val.\nIf look_for exists in used_nums, we’ve found a pair!\n\nReturn the current index i and the index of look_for.\n\nOtherwise, store val and its index in the dictionary.\n\n\nIf no pair is found, return -1.\n\n\n\n\n\nTime Complexity: O(n) – Loops through the list once.\nSpace Complexity: O(n) – The seen numbers are stored in a dictionary.\n\n\n\n\n\nUsing a hash map (dictionary) makes the solution fast and clean.\nUsing a lookup table reduces nested loops in problems like this."
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#solution",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#solution",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "def twoSum(self, nums: List[int], target: int) -&gt; List[int]:\n  used_nums = {}\n  \n  for i, val in enumerate(nums):\n    look_for = target - val\n    if look_for in used_nums.keys():\n      return [i, used_nums[look_for]]\n    else:\n      used_nums[val] = i\n    return -1"
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#how-it-works",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#how-it-works",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "Create a dictionary used_nums to keep track of numbers we’ve already seen along with their indices.\nFor each element val in nums:\n\n\nCalculate look_for = target - val.\nIf look_for exists in used_nums, we’ve found a pair!\n\nReturn the current index i and the index of look_for.\n\nOtherwise, store val and its index in the dictionary.\n\n\nIf no pair is found, return -1."
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#why-this-is-efficient",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#why-this-is-efficient",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "Time Complexity: O(n) – Loops through the list once.\nSpace Complexity: O(n) – The seen numbers are stored in a dictionary."
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#key-takeaways",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#key-takeaways",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "Using a hash map (dictionary) makes the solution fast and clean.\nUsing a lookup table reduces nested loops in problems like this."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome\nHere are the latest posts.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1. Two Sum\n\n\n\n\n\n\n\n\nJasvinder Ahuja\n\n\n\n\n\n\n\n\n\n\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]
