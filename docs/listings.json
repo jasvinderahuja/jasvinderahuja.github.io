@@ -1,7 +1,14 @@
 [
   {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/Leetcode/leetcode_1_TwoSum.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
+      "/posts/index.html",
       "/posts/Leetcode/leetcode_1_TwoSum.html"
     ]
   }

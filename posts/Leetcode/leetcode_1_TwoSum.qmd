@@ -1,6 +1,7 @@
 ---
 title: "1. Two Sum"
 author: "Jasvinder Ahuja"
+date: 2025-08-01
 execute: 
   eval: false
 format:

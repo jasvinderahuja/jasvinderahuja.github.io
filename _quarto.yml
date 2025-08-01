@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Jasvinder Ahuja"
-  search: true       
+  search: true
   navbar:
     left:
       - href: index.qmd
@@ -13,5 +13,3 @@ website:
         text: About
       - href: posts/
         text: Blog
-
-
