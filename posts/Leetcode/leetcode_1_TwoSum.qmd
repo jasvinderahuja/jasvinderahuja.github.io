@@ -1,6 +1,8 @@
 ---
 title: "1. Two Sum"
 author: "Jasvinder Ahuja"
+execute: 
+  eval: false
 format:
   html:
     toc: true
