@@ -11,5 +11,5 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: posts/
+      - href: posts/index.html
         text: Blog
