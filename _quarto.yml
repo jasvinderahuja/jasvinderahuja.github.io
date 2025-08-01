@@ -4,17 +4,14 @@ project:
 
 website:
   title: "Jasvinder Ahuja"
+  search: true       
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: About
-      - href: posts/index.qmd
+      - href: posts/
         text: Blog
 
-format:
-  html:
-    theme: cosmo
-    css: styles.css
 

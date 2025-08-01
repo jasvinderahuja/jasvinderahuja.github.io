@@ -6,9 +6,10 @@ execute:
 format:
   html:
     toc: true
+    toc-depth: 2
     code-copy: true
 editor: visual
-image: images/LC1_TwoSum.png
+image: posts/Leetcode/images/LC1_TwoSum.png
 categories: [Python, Algorithms]
 ---
 
