@@ -1,12 +1,7 @@
 ---
 title: "Home"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
 ---
 
 # Welcome
 
-Here are the latest posts.
-
+[Go to the Blog](posts/)
