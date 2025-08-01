@@ -25,7 +25,14 @@
     "href": "posts/Leetcode/leetcode_1_TwoSum.html",
     "title": "1. Two Sum",
     "section": "",
-    "text": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order.\n\n\n\ndef twoSum(self, nums: List[int], target: int) -&gt; List[int]:\n  used_nums = {}\n  \n  for i, val in enumerate(nums):\n    look_for = target - val\n    if look_for in used_nums.keys():\n      return [i, used_nums[look_for]]\n    else:\n      used_nums[val] = i\n    return -1\n\n\n\n\n\nCreate a dictionary used_nums to keep track of numbers we’ve already seen along with their indices.\nFor each element val in nums:\n\n\nCalculate look_for = target - val.\nIf look_for exists in used_nums, we’ve found a pair!\n\nReturn the current index i and the index of look_for.\n\nOtherwise, store val and its index in the dictionary.\n\n\nIf no pair is found, return -1.\n\n\n\n\n\nTime Complexity: O(n) – Loops through the list once.\nSpace Complexity: O(n) – The seen numbers are stored in a dictionary.\n\n\n\n\n\nUsing a hash map (dictionary) makes the solution fast and clean.\nUsing a lookup table reduces nested loops in problems like this."
+    "text": "link to leetcode\nGiven an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order.\n\n\n\n\ndef twoSum(self, nums: List[int], target: int) -&gt; List[int]:\n  used_nums = {}\n  \n  for i, val in enumerate(nums):\n    look_for = target - val\n    if look_for in used_nums.keys():\n      return [i, used_nums[look_for]]\n    else:\n      used_nums[val] = i\n    return -1\n\n\n\n\n\nCreate a dictionary used_nums to keep track of numbers we’ve already seen along with their indices.\nFor each element val in nums:\n\n\nCalculate look_for = target - val.\nIf look_for exists in used_nums, we’ve found a pair!\n\nReturn the current index i and the index of look_for.\n\nOtherwise, store val and its index in the dictionary.\n\n\nIf no pair is found, return -1.\n\n\n\n\n\nTime Complexity: O(n) – Loops through the list once.\nSpace Complexity: O(n) – The seen numbers are stored in a dictionary.\n\n\n\n\n\nUsing a hash map (dictionary) makes the solution fast and clean.\nUsing a lookup table reduces nested loops in problems like this."
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#question",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#question",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "link to leetcode\nGiven an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order."
   },
   {
     "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#solution",

@@ -14,7 +14,10 @@ image: images/LC1_TwoSum.png
 categories: [Python, Algorithms]
 ---
 
-# 1. Two Sum [link to leetcode](https://leetcode.com/problems/two-sum/description/)
+# 1. Two Sum 
+
+## Question
+[link to leetcode](https://leetcode.com/problems/two-sum/description/)
 
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 

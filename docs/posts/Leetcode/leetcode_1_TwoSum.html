@@ -153,8 +153,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#two-sum-link-to-leetcode" id="toc-two-sum-link-to-leetcode" class="nav-link active" data-scroll-target="#two-sum-link-to-leetcode">1. Two Sum link to leetcode</a>
+  <li><a href="#two-sum" id="toc-two-sum" class="nav-link active" data-scroll-target="#two-sum">1. Two Sum</a>
   <ul class="collapse">
+  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question">Question</a></li>
   <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
   <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How It Works:</a></li>
   <li><a href="#why-this-is-efficient" id="toc-why-this-is-efficient" class="nav-link" data-scroll-target="#why-this-is-efficient">Why This is Efficient:</a></li>
@@ -201,14 +202,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="two-sum-link-to-leetcode" class="level1">
-<h1>1. Two Sum <a href="https://leetcode.com/problems/two-sum/description/">link to leetcode</a></h1>
+<section id="two-sum" class="level1">
+<h1>1. Two Sum</h1>
+<section id="question" class="level2">
+<h2 class="anchored" data-anchor-id="question">Question</h2>
+<p><a href="https://leetcode.com/problems/two-sum/description/">link to leetcode</a></p>
 <p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</p>
 <p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
 <p>You can return the answer in any order.</p>
+</section>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
-<div id="a02ddd3d" class="cell" data-execution_count="1">
+<div id="81b8d681" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> twoSum(<span class="va">self</span>, nums: List[<span class="bu">int</span>], target: <span class="bu">int</span>) <span class="op">-&gt;</span> List[<span class="bu">int</span>]:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  used_nums <span class="op">=</span> {}</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  </span>
