@@ -1,7 +1,16 @@
 ---
 title: "Use NULLIF to avoid divide by zero error in T-SQL"
 author: "Jas Ahuja"
-format: html
+date: 2025-09-02
+execute: 
+  eval: false
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-copy: true
+editor: visual
+categories: [T-SQL]
 ---
 
 ## Introduction
@@ -11,7 +20,7 @@ This is often used to prevent divide-by-zero errors or to normalize values.
 
 ---
 
-## Basic Usage
+## Basic Usage  
 
 ```{sql}
 -- Returns NULL because both expressions are equal
@@ -21,7 +30,7 @@ SELECT NULLIF(10, 10) AS Result1;
 SELECT NULLIF(10, 20) AS Result2;
 ```
 
-## Preventing divide by zero
+## Preventing divide by zero  
 
 ```{sql}
 -- Without NULLIF, this would cause a divide-by-zero error
@@ -32,7 +41,7 @@ SELECT @numerator / NULLIF(@denominator, 0) AS SafeDivision;
 ```
 
 
-## Nullif in a SQL select
+## Nullif in a SQL select  
 
 ```{sql, eval=FALSE} 
 
@@ -47,7 +56,6 @@ INSERT INTO Sales VALUES
 (2, 250.00, 0),
 (3, 300.00, 10);
 
--- Use NULLIF to avoid divide-by-zero when calculating unit price
 SELECT 
     Id,
     Amount,
@@ -56,6 +64,8 @@ SELECT
 FROM Sales;
 
 ```
+
+
 
 | Id | Amount | Quantity | UnitPrice |
 |----|--------|----------|-----------|

@@ -46,7 +46,7 @@
     "href": "posts/SQL/nullif.html#nullif-in-a-sql-select",
     "title": "Use NULLIF to avoid divide by zero error in T-SQL",
     "section": "Nullif in a SQL select",
-    "text": "Nullif in a SQL select\n```{sql, eval=FALSE}\nCREATE TABLE Sales ( Id INT, Amount DECIMAL(10,2), Quantity INT );\nINSERT INTO Sales VALUES (1, 100.00, 5), (2, 250.00, 0), (3, 300.00, 10);\n– Use NULLIF to avoid divide-by-zero when calculating unit price SELECT Id, Amount, Quantity, Amount / NULLIF(Quantity, 0) AS UnitPrice FROM Sales;\n```\n\n\n\nId\nAmount\nQuantity\nUnitPrice\n\n\n\n\n1\n100.00\n5\n20.00\n\n\n2\n250.00\n0\nNULL\n\n\n3\n300.00\n10\n30.00"
+    "text": "Nullif in a SQL select\n```{sql, eval=FALSE}\nCREATE TABLE Sales ( Id INT, Amount DECIMAL(10,2), Quantity INT );\nINSERT INTO Sales VALUES (1, 100.00, 5), (2, 250.00, 0), (3, 300.00, 10);\nSELECT Id, Amount, Quantity, Amount / NULLIF(Quantity, 0) AS UnitPrice FROM Sales;\n```\n\n\n\nId\nAmount\nQuantity\nUnitPrice\n\n\n\n\n1\n100.00\n5\n20.00\n\n\n2\n250.00\n0\nNULL\n\n\n3\n300.00\n10\n30.00"
   },
   {
     "objectID": "posts/Leetcode/leetcode_1_TwoSum.html",
@@ -95,13 +95,13 @@
     "href": "posts/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Use NULLIF to avoid divide by zero error in T-SQL\n\n\n\n\n\n\n\n\nJas Ahuja\n\n\n\n\n\n\n\n\n\n\n\n\n1. Two Sum\n\n\n\n\n\n\n\n\nAug 1, 2025\n\n\nJasvinder Ahuja\n\n\n\n\n\nNo matching items"
+    "text": "Use NULLIF to avoid divide by zero error in T-SQL\n\n\n\n\n\n\n\n\nSep 2, 2025\n\n\nJas Ahuja\n\n\n\n\n\n\n\n\n\n\n\n\n1. Two Sum\n\n\n\n\n\n\n\n\nAug 1, 2025\n\n\nJas Ahuja\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Blog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse NULLIF to avoid divide by zero error in T-SQL\n\n\n\n\n\n\n\n\nJas Ahuja\n\n\n\n\n\n\n\n\n\n\n\n\n1. Two Sum\n\n\n\n\n\n\n\n\nAug 1, 2025\n\n\nJasvinder Ahuja\n\n\n\n\n\nNo matching items"
+    "text": "Blog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse NULLIF to avoid divide by zero error in T-SQL\n\n\n\n\n\n\n\n\nSep 2, 2025\n\n\nJas Ahuja\n\n\n\n\n\n\n\n\n\n\n\n\n1. Two Sum\n\n\n\n\n\n\n\n\nAug 1, 2025\n\n\nJas Ahuja\n\n\n\n\n\nNo matching items"
   }
 ]
