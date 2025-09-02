@@ -1,0 +1,64 @@
+---
+title: "Use NULLIF to avoid divide by zero error in T-SQL"
+author: "Jas Ahuja"
+format: html
+---
+
+## Introduction
+
+The `NULLIF` function in T-SQL returns **NULL** if two expressions are equal; otherwise, it returns the first expression.  
+This is often used to prevent divide-by-zero errors or to normalize values.
+
+---
+
+## Basic Usage
+
+```{sql}
+-- Returns NULL because both expressions are equal
+SELECT NULLIF(10, 10) AS Result1;
+
+-- Returns 10 because the expressions are not equal
+SELECT NULLIF(10, 20) AS Result2;
+```
+
+## Preventing divide by zero
+
+```{sql}
+-- Without NULLIF, this would cause a divide-by-zero error
+DECLARE @numerator INT = 100;
+DECLARE @denominator INT = 0;
+
+SELECT @numerator / NULLIF(@denominator, 0) AS SafeDivision;
+```
+
+
+## Nullif in a SQL select
+
+```{sql, eval=FALSE} 
+
+CREATE TABLE Sales (
+    Id INT,
+    Amount DECIMAL(10,2),
+    Quantity INT
+);
+
+INSERT INTO Sales VALUES
+(1, 100.00, 5),
+(2, 250.00, 0),
+(3, 300.00, 10);
+
+-- Use NULLIF to avoid divide-by-zero when calculating unit price
+SELECT 
+    Id,
+    Amount,
+    Quantity,
+    Amount / NULLIF(Quantity, 0) AS UnitPrice
+FROM Sales;
+
+```
+
+| Id | Amount | Quantity | UnitPrice |
+|----|--------|----------|-----------|
+| 1  | 100.00 | 5        | 20.00     |
+| 2  | 250.00 | 0        | NULL      |
+| 3  | 300.00 | 10       | 30.00     |

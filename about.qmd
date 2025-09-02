@@ -5,9 +5,9 @@ format: html
 
 # About Jasvinder
 
-I am Healthcare Data Scientist passionate about using data to drive meaningful impact in patient care, equity, and operational efficiency. Currently at Virginia Garcia Memorial Health Center (an FQHC), I design end-to-end analytics solutions — from data pipelines and machine learning models to intuitive dashboards — that empower care teams and support underserved communities.
+I am Healthcare Data Scientist passionate about using data to drive meaningful impact in patient care, equity, and operational efficiency. At Virginia Garcia Memorial Health Center (an FQHC), I design end-to-end analytics solutions — from data pipelines and machine learning models to intuitive dashboards — that empower care teams and support underserved communities.
 
-With a background in bioinformatics and molecular genetics research from Oregon Health & Science University, NIH and Cleveland State University, I bring the rigor of a researcher and the focus of a practitioner to real-world applications. My recent work includes outreach prioritization models, social (non-medical) determinants of health (SDoH) analysis, and tools to improve appointment utilization and care access.
+With a background in biostatistics, bioinformatics and molecular genetics research from Oregon Health & Science University, NIH and Cleveland State University, I bring the rigor of a researcher and the focus of a practitioner to real-world applications. My recent work includes outreach prioritization models, social (non-medical) determinants of health (SDoH) analysis, and tools to improve appointment utilization and care access.
 
 I specialize in SQL, R, Python, Tableau, machine learning and Molecular Genetics. My approach is strategic, human-centered, and outcome-driven — always aligned with the mission of making healthcare more data-informed, effective, and equitable.
 
