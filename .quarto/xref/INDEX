@@ -10,5 +10,8 @@
   },
   "posts/index.qmd": {
     "index.html": "6d169043"
+  },
+  "posts/SQL/nullif.qmd": {
+    "nullif.html": "78b34c34"
   }
 }

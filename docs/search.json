@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am Healthcare Data Scientist passionate about using data to drive meaningful impact in patient care, equity, and operational efficiency. At Virginia Garcia Memorial Health Center (an FQHC), I design end-to-end analytics solutions — from data pipelines and machine learning models to intuitive dashboards — that empower care teams and support underserved communities.\nWith a background in biostatistics, bioinformatics and molecular genetics research from Oregon Health & Science University, NIH and Cleveland State University, I bring the rigor of a researcher and the focus of a practitioner to real-world applications. My recent work includes outreach prioritization models, social (non-medical) determinants of health (SDoH) analysis, and tools to improve appointment utilization and care access.\nI specialize in SQL, R, Python, Tableau, machine learning and Molecular Genetics. My approach is strategic, human-centered, and outcome-driven — always aligned with the mission of making healthcare more data-informed, effective, and equitable.\n\n\nIf you’d like to collaborate, discuss opportunities, or just say hello, feel free to connect with me via LinkedIn or email me directly at jasvinderahuja@gmail.com."
+  },
+  {
+    "objectID": "about.html#get-in-touch",
+    "href": "about.html#get-in-touch",
+    "title": "About",
+    "section": "",
+    "text": "If you’d like to collaborate, discuss opportunities, or just say hello, feel free to connect with me via LinkedIn or email me directly at jasvinderahuja@gmail.com."
+  },
+  {
+    "objectID": "posts/SQL/nullif.html",
+    "href": "posts/SQL/nullif.html",
+    "title": "Use NULLIF to avoid divide by zero error in T-SQL",
+    "section": "",
+    "text": "The NULLIF function in T-SQL returns NULL if two expressions are equal; otherwise, it returns the first expression.\nThis is often used to prevent divide-by-zero errors or to normalize values."
+  },
+  {
+    "objectID": "posts/SQL/nullif.html#introduction",
+    "href": "posts/SQL/nullif.html#introduction",
+    "title": "Use NULLIF to avoid divide by zero error in T-SQL",
+    "section": "",
+    "text": "The NULLIF function in T-SQL returns NULL if two expressions are equal; otherwise, it returns the first expression.\nThis is often used to prevent divide-by-zero errors or to normalize values."
+  },
+  {
+    "objectID": "posts/SQL/nullif.html#basic-usage",
+    "href": "posts/SQL/nullif.html#basic-usage",
+    "title": "Use NULLIF to avoid divide by zero error in T-SQL",
+    "section": "Basic Usage",
+    "text": "Basic Usage\n-- Returns NULL because both expressions are equal\nSELECT NULLIF(10, 10) AS Result1;\n\n-- Returns 10 because the expressions are not equal\nSELECT NULLIF(10, 20) AS Result2;"
+  },
+  {
+    "objectID": "posts/SQL/nullif.html#preventing-divide-by-zero",
+    "href": "posts/SQL/nullif.html#preventing-divide-by-zero",
+    "title": "Use NULLIF to avoid divide by zero error in T-SQL",
+    "section": "Preventing divide by zero",
+    "text": "Preventing divide by zero\n-- Without NULLIF, this would cause a divide-by-zero error\nDECLARE @numerator INT = 100;\nDECLARE @denominator INT = 0;\n\nSELECT @numerator / NULLIF(@denominator, 0) AS SafeDivision;"
+  },
+  {
+    "objectID": "posts/SQL/nullif.html#nullif-in-a-sql-select",
+    "href": "posts/SQL/nullif.html#nullif-in-a-sql-select",
+    "title": "Use NULLIF to avoid divide by zero error in T-SQL",
+    "section": "Nullif in a SQL select",
+    "text": "Nullif in a SQL select\n```{sql, eval=FALSE}\nCREATE TABLE Sales ( Id INT, Amount DECIMAL(10,2), Quantity INT );\nINSERT INTO Sales VALUES (1, 100.00, 5), (2, 250.00, 0), (3, 300.00, 10);\n– Use NULLIF to avoid divide-by-zero when calculating unit price SELECT Id, Amount, Quantity, Amount / NULLIF(Quantity, 0) AS UnitPrice FROM Sales;\n```\n\n\n\nId\nAmount\nQuantity\nUnitPrice\n\n\n\n\n1\n100.00\n5\n20.00\n\n\n2\n250.00\n0\nNULL\n\n\n3\n300.00\n10\n30.00"
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "link to leetcode\nGiven an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order.\n\n\n\n\ndef twoSum(self, nums: List[int], target: int) -&gt; List[int]:\n  used_nums = {}\n  \n  for i, val in enumerate(nums):\n    look_for = target - val\n    if look_for in used_nums.keys():\n      return [i, used_nums[look_for]]\n    else:\n      used_nums[val] = i\n    return -1\n\n\n\n\n\nCreate a dictionary used_nums to keep track of numbers we’ve already seen along with their indices.\nFor each element val in nums:\n\n\nCalculate look_for = target - val.\nIf look_for exists in used_nums, we’ve found a pair!\n\nReturn the current index i and the index of look_for.\n\nOtherwise, store val and its index in the dictionary.\n\n\nIf no pair is found, return -1.\n\n\n\n\n\nTime Complexity: O(n) – Loops through the list once.\nSpace Complexity: O(n) – The seen numbers are stored in a dictionary.\n\n\n\n\n\nUsing a hash map (dictionary) makes the solution fast and clean.\nUsing a lookup table reduces nested loops in problems like this."
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#question",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#question",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "link to leetcode\nGiven an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order."
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#solution",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#solution",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "def twoSum(self, nums: List[int], target: int) -&gt; List[int]:\n  used_nums = {}\n  \n  for i, val in enumerate(nums):\n    look_for = target - val\n    if look_for in used_nums.keys():\n      return [i, used_nums[look_for]]\n    else:\n      used_nums[val] = i\n    return -1"
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#how-it-works",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#how-it-works",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "Create a dictionary used_nums to keep track of numbers we’ve already seen along with their indices.\nFor each element val in nums:\n\n\nCalculate look_for = target - val.\nIf look_for exists in used_nums, we’ve found a pair!\n\nReturn the current index i and the index of look_for.\n\nOtherwise, store val and its index in the dictionary.\n\n\nIf no pair is found, return -1."
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#why-this-is-efficient",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#why-this-is-efficient",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "Time Complexity: O(n) – Loops through the list once.\nSpace Complexity: O(n) – The seen numbers are stored in a dictionary."
+  },
+  {
+    "objectID": "posts/Leetcode/leetcode_1_TwoSum.html#key-takeaways",
+    "href": "posts/Leetcode/leetcode_1_TwoSum.html#key-takeaways",
+    "title": "1. Two Sum",
+    "section": "",
+    "text": "Using a hash map (dictionary) makes the solution fast and clean.\nUsing a lookup table reduces nested loops in problems like this."
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Use NULLIF to avoid divide by zero error in T-SQL\n\n\n\n\n\n\n\n\nJas Ahuja\n\n\n\n\n\n\n\n\n\n\n\n\n1. Two Sum\n\n\n\n\n\n\n\n\nAug 1, 2025\n\n\nJasvinder Ahuja\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Blog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse NULLIF to avoid divide by zero error in T-SQL\n\n\n\n\n\n\n\n\nJas Ahuja\n\n\n\n\n\n\n\n\n\n\n\n\n1. Two Sum\n\n\n\n\n\n\n\n\nAug 1, 2025\n\n\nJasvinder Ahuja\n\n\n\n\n\nNo matching items"
+  }
+]
