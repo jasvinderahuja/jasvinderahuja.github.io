@@ -22,7 +22,7 @@ This is often used to prevent divide-by-zero errors or to normalize values.
 
 ## Basic Usage  
 
-```{sql}
+```sql
 -- Returns NULL because both expressions are equal
 SELECT NULLIF(10, 10) AS Result1;
 
@@ -32,7 +32,7 @@ SELECT NULLIF(10, 20) AS Result2;
 
 ## Preventing divide by zero  
 
-```{sql}
+```sql
 -- Without NULLIF, this would cause a divide-by-zero error
 DECLARE @numerator INT = 100;
 DECLARE @denominator INT = 0;
@@ -44,7 +44,7 @@ SELECT @numerator / NULLIF(@denominator, 0) AS SafeDivision;
 ## Nullif in a SQL select   
 
 
-```{sql}   
+```sql   
 
 CREATE TABLE Sales (
     Id INT,
