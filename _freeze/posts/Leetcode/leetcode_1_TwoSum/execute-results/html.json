@@ -1,0 +1,12 @@
+{
+  "hash": "6d0044425344d527187bb7071023ca35",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"1. Two Sum\"\nauthor: \"Jas Ahuja\"\ndate: 2025-08-01\nexecute: \n  eval: false\nformat:\n  html:\n    toc: true\n    toc-depth: 2\n    code-copy: true\neditor: visual\nimage: images/LC1_TwoSum.png\ncategories: [Python, Algorithms]\n---\n\n# 1. Two Sum\n\n## Question\n\n[link to leetcode](https://leetcode.com/problems/two-sum/description/)\n\nGiven an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\n## Solution\n\n::: {#68c5073c .cell execution_count=1}\n``` {.python .cell-code}\ndef twoSum(self, nums: List[int], target: int) -> List[int]:\n  used_nums = {}\n  \n  for i, val in enumerate(nums):\n    look_for = target - val\n    if look_for in used_nums.keys():\n      return [i, used_nums[look_for]]\n    else:\n      used_nums[val] = i\n    return -1\n```\n:::\n\n\n## How It Works:\n\n1.  Create a dictionary used_nums to keep track of numbers we’ve already seen along with their indices.\n\n2.  For each element val in nums:\n\n-   Calculate look_for = target - val.\n-   If look_for exists in used_nums, we’ve found a pair!\n    -   Return the current index i and the index of look_for.\n-   Otherwise, store val and its index in the dictionary.\n\n3.  If no pair is found, return -1.\n\n## Why This is Efficient:\n\n-   Time Complexity: O(n) – Loops through the list once.\n-   Space Complexity: O(n) – The seen numbers are stored in a dictionary.\n\n## Key Takeaways:\n\n-   Using a hash map (dictionary) makes the solution fast and clean.\n-   Using a lookup table reduces nested loops in problems like this.\n\n",
+    "supporting": [
+      "leetcode_1_TwoSum_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
