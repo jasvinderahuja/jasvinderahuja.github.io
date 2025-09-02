@@ -186,11 +186,25 @@ SELECT @numerator / NULLIF(@denominator, 0) AS SafeDivision;</code></pre>
 </section>
 <section id="nullif-in-a-sql-select" class="level2">
 <h2 class="anchored" data-anchor-id="nullif-in-a-sql-select">Nullif in a SQL select</h2>
-<p>```{sql, eval=FALSE}</p>
-<p>CREATE TABLE Sales ( Id INT, Amount DECIMAL(10,2), Quantity INT );</p>
-<p>INSERT INTO Sales VALUES (1, 100.00, 5), (2, 250.00, 0), (3, 300.00, 10);</p>
-<p>SELECT Id, Amount, Quantity, Amount / NULLIF(Quantity, 0) AS UnitPrice FROM Sales;</p>
-<p>```</p>
+<pre class="{sql}"><code>
+CREATE TABLE Sales (
+    Id INT,
+    Amount DECIMAL(10,2),
+    Quantity INT
+);
+
+INSERT INTO Sales VALUES
+(1, 100.00, 5),
+(2, 250.00, 0),
+(3, 300.00, 10);
+
+SELECT 
+    Id,
+    Amount,
+    Quantity,
+    Amount / NULLIF(Quantity, 0) AS UnitPrice
+FROM Sales;
+</code></pre>
 <table class="caption-top table">
 <thead>
 <tr class="header">

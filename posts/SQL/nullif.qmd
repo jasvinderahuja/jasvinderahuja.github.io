@@ -41,9 +41,10 @@ SELECT @numerator / NULLIF(@denominator, 0) AS SafeDivision;
 ```
 
 
-## Nullif in a SQL select  
+## Nullif in a SQL select   
 
-```{sql, eval=FALSE} 
+
+```{sql}   
 
 CREATE TABLE Sales (
     Id INT,
