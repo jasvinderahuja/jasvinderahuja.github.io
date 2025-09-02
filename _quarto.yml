@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Jasvinder Ahuja"
+  title: "Jas Ahuja"
   search: true
   navbar:
     left:
@@ -13,3 +13,14 @@ website:
         text: About
       - href: posts/index.html
         text: Blog
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: slate
+    highlight-style:
+      light: github
+      dark: monokai
+    code-line-numbers: true
+    code-overflow: wrap
